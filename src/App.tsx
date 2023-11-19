@@ -9,6 +9,8 @@ import Navbar from "./components/navbar/Navbar";
 import Menu from "./components/menu/Menu";
 import Footer from "./components/footer/Footer";
 import './styles/global.scss'
+import User from "./pages/user/User";
+import Product from "./pages/product/Product";
 function App() {
   const Layout = () => {
     return (
@@ -42,6 +44,14 @@ function App() {
         {
           path: "products",
           element: <Products />,
+        },
+        {
+          path: "users/:id",
+          element: <User/>,
+        },
+        {
+          path: "products/:id",
+          element: <Product/>,
         },
       ]
     },
